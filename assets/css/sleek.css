@@ -39,7 +39,7 @@
 *::before,
 *::after {
   box-sizing: border-box; }
-
+.clear{clear: both;}
 html {
   font-family: sans-serif;
   line-height: 1.15;
