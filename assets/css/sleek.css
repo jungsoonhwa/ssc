@@ -342,6 +342,10 @@ h6, .h6 {
   font-size: 3.5rem;
   font-weight: 300;
   line-height: 1.2; }
+  .display-5 {
+    font-size: 2.5rem;
+    font-weight: 300;
+    line-height: 1.2; }
 
 hr {
   margin-top: 1rem;
@@ -369,6 +373,8 @@ mark,
 
 .list-inline-item {
   display: inline-block; }
+
+
   .list-inline-item:not(:last-child) {
     margin-right: 0.5rem; }
 
@@ -1273,7 +1279,7 @@ pre {
     border-bottom: 2px solid #e5e9f2; }
   .table tbody + tbody {
     border-top: 2px solid #e5e9f2; }
-
+    .table td .mdi{font-size:25px}
 .table-sm th,
 .table-sm td {
   padding: 0.3rem; }
@@ -8506,6 +8512,9 @@ button {
 .iconbox-45 {
   width: 45px;
   height: 45px; }
+  .iconbox-85 {
+    width: 85px;
+    height: 85px; }
 
 /* Vertical Height 100%*/
 .vh-100 {
@@ -8517,7 +8526,8 @@ button {
 
 .font-size-20 {
   font-size: 1.25rem; }
-
+  .font-size-40 {
+    font-size: 40px; }
 /* Vertical Position */
 .absolute-middle {
   top: 50%;
