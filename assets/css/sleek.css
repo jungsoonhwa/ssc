@@ -10441,8 +10441,8 @@ div.copied {
     margin: 0; } }
 
 /* Header Fix and Header Static For Mobile */
-.header-fixed .page-wrapper {
-  padding-top: 4.875rem; }
+/*.header-fixed .page-wrapper {
+  padding-top: 4.875rem; }*/
 
 .header-fixed.header-static-mobile .main-header {
   position: relative; }
