@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="">
+
+
+  <title>중앙모니터링 시스템</title>
+
+  <!-- GOOGLE FONTS -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500|Poppins:400,500,600,700|Roboto:400,500"
+    rel="stylesheet" />
+  <link href="https://cdn.materialdesignicons.com/4.4.95/css/materialdesignicons.min.css" rel="stylesheet" />
+
+
+  <!-- PLUGINS CSS STYLE -->
+  <link href="assets/plugins/nprogress/nprogress.css" rel="stylesheet" />
+
+  <!-- SLEEK CSS -->
+  <link id="sleek-css" rel="stylesheet" href="assets/css/sleek.css" />
+  <script src="assets/plugins/nprogress/nprogress.js"></script>
+</head>
+
+<body class="header-fixed sidebar-fixed sidebar-dark header-light" id="body">
+
+  <script>
+    NProgress.configure({ showSpinner: false });
+    NProgress.start();
+  </script>
+
+
+
+  <div class="wrapper">
+
+    <aside class="left-sidebar bg-sidebar">
+      <div id="sidebar" class="sidebar sidebar-with-footer">
+        <!-- Aplication Brand -->
+        <div class="app-brand">
+          <a href="index.html" title="Sleek Dashboard">
+            <span class="brand-name text-truncate">SCC Dashboard</span>
+          </a>
+        </div>
+        <!-- begin sidebar scrollbar -->
+        <div class="sidebar-scrollbar">
+
+          <!-- sidebar menu -->
+          <ul class="nav sidebar-inner" id="sidebar-menu">
+
+            <li class="has-sub ">
+              <a class="sidenav-item-link" href="index.html" aria-expanded="false">
+                <i class="mdi mdi-view-dashboard-outline"></i>
+                <span class="nav-text">Dashboard</span> <b class="caret"></b>
+              </a>
+            </li>
+
+            <li class="has-sub">
+              <a class="sidenav-item-link" href="page2.html" aria-expanded="false">
+                <i class="mdi mdi-account-multiple-outline"></i>
+                <span class="nav-text">User List</span> <b class="caret"></b>
+              </a>
+            </li>
+            <li class="has-sub">
+              <a class="sidenav-item-link" href="page3.html" aria-expanded="false">
+                <i class="mdi mdi-domain"></i>
+                <span class="nav-text">Company List</span> <b class="caret"></b>
+              </a>
+            </li>
+            <li class="has-sub ">
+              <a class="sidenav-item-link" href="page4.html" aria-expanded="false">
+                <i class="mdi mdi-paper-cut-vertical"></i>
+                <span class="nav-text"> Store List</span> <b class="caret"></b>
+              </a>
+            </li>
+            <li class="has-sub active expand">
+              <a class="sidenav-item-link" href="javascript:void(0)" aria-expanded="false">
+                <i class="mdi mdi-download-network"></i>
+                <span class="nav-text">Station </span> <b class="caret"></b>
+              </a>
+            </li>
+            <li class="has-sub">
+              <a class="sidenav-item-link" href="javascript:void(0)" aria-expanded="false">
+                <i class="mdi mdi-bookmark"></i>
+                <span class="nav-text"> LABEL</span> <b class="caret"></b>
+              </a>
+            </li>
+            <li class="has-sub">
+              <a class="sidenav-item-link" href="javascript:void(0)" d aria-expanded="false">
+                <i class="mdi mdi-server-network"></i>
+                <span class="nav-text"> Master Gateway List</span> <b class="caret"></b>
+              </a>
+            </li>
+            <li class="has-sub">
+              <a class="sidenav-item-link" href="javascript:void(0)" aria-expanded="false">
+                <i class="mdi mdi-server-network"></i>
+                <span class="nav-text">Gateway List2</span> <b class="caret"></b>
+              </a>
+            </li>
+            <li class="has-sub">
+              <a class="sidenav-item-link" href="javascript:void(0)" aria-expanded="false">
+                <i class="mdi mdi-format-line-weight"></i>
+                <span class="nav-text"> ESL List</span> <b class="caret"></b>
+              </a>
+            </li>
+          </ul>
+
+        </div>
+
+
+      </div>
+    </aside>
+
+
+    <div class="page-wrapper">
+      <!-- Header -->
+    
+
+
+      <div class="content-wrapper">
+        <div class="content">
+          <div class="breadcrumb-wrapper">
+            <h1>토이저러스
+            </h1>
+              <nav aria-label="breadcrumb">
+                <ol class="breadcrumb p-0">
+                  <li class="breadcrumb-item">
+                    Station code
+                  </li>
+                  <li class="breadcrumb-item">
+                    name : 2568
+                  </li>
+                  <li class="breadcrumb-item">
+                    GW IP : x.x.x.x
+                  </li>
+                </ol>
+              </nav>
+          </div>
+            <div class="row">
+                <div class="col-md-6 col-lg-6 col-xl-4">
+                    <div class="media widget-media p-4 bg-white border">
+                        <div class="icon rounded-circle mr-4 bg-primary">
+                            <i class="mdi mdi-database-check text-white "></i>
+                        </div>
+                        <div class="media-body align-self-center">
+                          <p>Connection</p>
+                            <h4 class="mb-2"></h4>
+                                                </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6 col-xl-4">
+                    <div class="media widget-media p-4 bg-white border">
+                        <div class="icon rounded-circle bg-danger mr-4">
+                            <i class="mdi mdi-developer-board text-white "></i>
+                        </div>
+                        <div class="media-body align-self-center">
+                            <p>NTP</p>
+                            <h4 class="mb-2">0</h4>
+                                              </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6 col-xl-4">
+                  <div class="media widget-media p-4 bg-white border">
+                    <div class="icon rounded-circle bg-warning mr-4">
+                        <i class="mdi mdi-tag text-white "></i>
+                    </div>
+                    <div class="media-body align-self-center">
+                        <p>Active Labels</p>
+                        <h4 class="mb-2">55552</h4>
+                                      </div>
+                </div>
+                </div>
+                   <div class="col-lg-12">
+              <div class="card card-default">
+                <div class="card-header card-header-border-bottom">
+                  <h2>Access Point Information</h2>
+                </div>
+                           <div class="card-body">
+                  <table class="table table-hover">
+                    <thead>
+                      <tr>
+                        <th>Access Point IP</th>
+                        <th>MAC Address</th>
+                        <th>Firmware Version</th>
+                        <th>Last Outline Time</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>GW.2466-46566_46346</td>
+                        <td>49.45.577 </td>
+                        <td>Dos-ew35 </td>
+                        <td> 2020-03-23 12:23:00
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-12">
+              <div class="card card-default">
+                <div class="card-header card-header-border-bottom">
+                  <h2>Label Information</h2>
+                </div>                           <div class="card-body">
+                  <form class="form-inline">
+                    <label class="mr-sm-2" for="">Label code</label>
+                    <input type="text" class="form-control input-sm mr-sm-1" placeholder="Label code">
+                                    <select class="custom-select my-1 mr-sm-2" id="exampleFormControlSelect12">
+                        <option>search label code</option>
+                        <option></option>
+                        <option></option>
+                    </select>
+                <button type="submit" class="btn btn-primary ">검색</button>
+                </form>
+                  <table class="table table-hover mt-2">
+                    <thead>
+                      <tr>
+                        <th>Label code </th>
+                        <th>Product code</th>
+                        <th>product Name</th>
+                        <th>Update Time</th>
+                        <th>Label Type</th>
+                        <th>Message type</th>
+                        <th>Status</th>
+                        <th>Firmware Version</th>
+                        <th>Battery Status</th>
+                        <th>Image</th>
+                        <th>Schedules</th>>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>GW.2466-46566_46346</td>
+                        <td>49.45.577 </td>
+                        <td>하늘보리 </td>
+                        <td>2020-03-23 15:24:44</td>
+                        <td>GRAPHIC_2_0_o_RED_NFC </td>
+                        <td>ASS</td>
+                        <td>SUccess</td>
+                        <td>120 </td>
+                        <td>Good</td>
+                        <td><a href=""> <span class="mdi mdi-image"></span>  </a></td>
+                        <td><a href=""> <span class=" mdi mdi-feature-search"></span>  </a></td>
+                      </tr>
+                      <tr>
+                        <td>GW.2466-255566_46346</td>
+                        <td>49.45.577 </td>
+                        <td>씨그램 </td>
+                        <td>2020-03-23 15:24:44</td>
+                        <td>GRAPHIC_2_0_o_RED_NFC </td>
+                        <td>ASS</td>
+                        <td>SUccess</td>
+                        <td>120 </td>
+                        <td>Good</td>
+                        <td><a href=""> <span class="mdi mdi-image"></span>  </a></td>
+                        <td><a href=""> <span class=" mdi mdi-feature-search"></span>  </a></td>
+                      </tr>
+                      <tr>
+                        <td>GW.2466-46566_424556</td>
+                        <td>49.45.577 </td>
+                        <td>삼다수</td>
+                        <td>2020-03-23 15:24:44</td>
+                        <td>GRAPHIC_2_0_o_RED_NFC </td>
+                        <td>ASS</td>
+                        <td>SUccess</td>
+                        <td>120 </td>
+                        <td>Good</td>
+                        <td><a href=""> <span class="mdi mdi-image"></span>  </a></td>
+                        <td><a href=""> <span class=" mdi mdi-feature-search"></span>  </a></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+
+        </div>
+
+        <footer class="footer mt-auto">
+          <div class="copyright bg-white">
+            <p>
+              &copy; <span id="copy-year">2019</span> SOLUM All Rights Reserved
+
+            </p>
+          </div>
+          <script>
+            var d = new Date();
+            var year = d.getFullYear();
+            document.getElementById("copy-year").innerHTML = year;
+          </script>
+        </footer>
+
+      </div>
+    </div>
+
+    <script src="assets/plugins/jquery/jquery.min.js"></script>
+    <script src="assets/plugins/slimscrollbar/jquery.slimscroll.min.js"></script>
+
+    <script src="assets/plugins/data-tables/jquery.datatables.min.js"></script>
+    <script src="assets/plugins/data-tables/datatables.bootstrap4.min.js"></script>
+
+    <script src="assets/js/sleek.bundle.js"></script>
+</body>
+
+</html>
