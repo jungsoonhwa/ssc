@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="target-densitydpi=device-dpi,width=device-width,initial-scale=1.0,minimum-scale=0,maximum-scale=10,user-scalable=no">
+    <link rel="stylesheet" href="../css/style.css" type="text/css" />
+    <!-- css -->
+    <link rel="stylesheet" href="../js/jquery-ui/jquery-ui.min.css" type="text/css" />
+    <!-- css -->
+
+    <title>HOMEPICK</title>
+
+
+    <meta name="csrf-token" content="FDEjafCMGF3Qtc1sGN69TRW8QIMe9xp3nkqGXu6N">
+    <link rel="stylesheet" type="text/css" href="../css/ds.white.loading.css">
+    <link href="../css/contents.css" rel="stylesheet">
+    <link href="../css/common.css" rel="stylesheet">
+    <link href="../css/m_common.css" rel="stylesheet">
+    <link href="../css/m_style.css" rel="stylesheet">
+    <link href="../css/mobile.css" rel="stylesheet">
+    <link href="../css/font.css" rel="stylesheet">
+    <link rel="stylesheet" type="text../css" href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css">
+    <link rel="stylesheet" href="../wizard/css/style.css">
+    	<!-- MATERIAL DESIGN ICONIC FONT -->
+		<link rel="stylesheet" href="../wizard/fonts/material-design-iconic-font/css/material-design-iconic-font.css">
+    <!--
+<style>
+#veil {
+	width: 100%;
+	height: 100%;
+	z-index: 9998;
+	position: fixed;
+	opacity: 0.6;
+	background-color: black;
+	display: none;
+}
+</style>
+-->
+
+</head>
+
+<body>
+    <div id="wrap">
+        <div id="veil"></div>
+      
+
+
+        <div id="hd">
+            <div class="hd_w cf">
+                <div class="logo"><a href="/"><img src="../images/logo.png" alt="HOMEPICK" /></a></div>
+                <div class="gnb only_pc_blk">
+                    <ul class="cate cf">
+                        <li class="cate_li">
+                            <a class="headfont" href="#none" onclick="goDelivery();">택배신청</a>
+                            <ul class="dep2">
+                                <li><a class="headfont" href="#none" onclick="goDelivery();">택배신청</a></li>
+                                <li><a class="headfont" href="https://dev-home.homepick.com/order/massOrderTerm">대량택배신청</a></li>
+                                <li><a href="https://dev-home.homepick.com/quick_agree_pc">퀵서비스 신청</a></li>
+
+
+                            </ul>
+                        </li>
+                        <li class="cate_li">
+                            <a class="headfont" href="#none" onclick="goBrand()">브랜드&amp;서비스 소개</a>
+                            <ul class="dep2">
+                                <li><a class="headfont" href="#none" onclick="goBrand()">브랜드 소개</a></li>
+                                <li><a class="headfont" href="https://dev-home.homepick.com/intro/category">홈픽과 함께하는 브랜드</a></li>
+                                <li><a class="headfont" href="https://dev-home.homepick.com/intro/location">찾아오시는 길</a></li>
+                            </ul>
+                        </li>
+                        <li class="cate_li">
+                            <a class="headfont" href="#none" onclick="goInfo()">이용안내</a>
+                            <ul class="dep2">
+                                <li><a class="headfont" href="#none" onclick="goInfo()">택배신청 방법</a></li>
+                                <li><a class="headfont" href="https://dev-home.homepick.com/info/request_cost">이용요금 및 시간</a></li>
+                                <li><a class="headfont" href="https://dev-home.homepick.com/info/note">유의사항</a></li>
+                                <li><a class="headfont" href="https://dev-home.homepick.com/info/use_term">이용약관</a></li>
+                                <li><a class="headfont" href="https://dev-home.homepick.com/info/privacy">개인정보수집/이용</a></li>
+                            </ul>
+                        </li>
+                        <li class="cate_li">
+                            <a class="headfont" href="#none" onclick="goCustomer()">고객센터</a>
+                            <ul class="dep2">
+                                <li><a class="headfont" href="#none" onclick="goCustomer()">공지/홍보</a></li>
+                                <li><a class="headfont" href="https://dev-home.homepick.com/bbs/list?board=faq">FAQ</a></li>
+                                <!-- <li><a href="https://dev-home.homepick.com/bbs/list?board=customer">고객의 소리</a></li> -->
+                            </ul>
+                        </li>
+                        <li class="cate_li">
+                            <a class="headfont" href="#none" onclick="goMypage()">마이페이지</a>
+                            <ul class="dep2">
+                                <li><a class="headfont" href="#none" onclick="goMypage()">개인정보관리</a></li>
+                                <li><a class="headfont" href="#none" onclick="goGetOrders()">택배신청현황</a></li>
+                                <li><a class="headfont" href="https://dev-home.homepick.com/order/massOrderList">대량신청현황</a></li>
+                                <li><a class="headfont" href="https://dev-home.homepick.com/mypage/addresslist">주소록</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="mem">
+                    <ul>
+                        <li><a href="/auth/logout/N"><i><img src="/images/logout_icon.png" alt="" /></i>로그아웃</a></li>
+                        <li><a href="#none" onclick="goGetOrders()"><i><img src="/images/search_icon.png" alt="" /></i>택배조회</a></li>
+                    </ul>
+                </div>
+
+                <div class="ham_btn only_mb_blk">
+                    <span class="menu_line_1"></span>
+                    <span class="menu_line_2"></span>
+                    <span class="menu_line_3"></span>
+                </div>
+                <div class="only_mb_blk mb_gnb">
+                    <div class="gnb_logo"><a href="/"><img src="/images/logo.png"  alt="HOMEPICK" style="margin-top:23px" /></a></div>
+                    <div class="close_btn">
+                        <span class="menu_line_1"></span>
+                        <span class="menu_line_2"></span>
+                        <span class="menu_line_3"></span>
+                    </div>
+                    <ul class="cate cf">
+                        <li class="cate_li">
+                            <span class="dep1_menu">택배신청</span>
+                            <ul class="dep2">
+                                <li><a href=" https://dev-home.homepick.com/order/orderTerm ">- 택배신청</a></li>
+                                <li><a href="https://dev-home.homepick.com/order/massOrderTerm">- 대량택배신청</a></li>
+                                <!-- <li><a a href="/quickquick">- 퀵서비스신청</a></li> -->
+
+                            </ul>
+                        </li>
+                        <li class="cate_li">
+                            <span class="dep1_menu">브랜드&amp;서비스 소개</span>
+                            <ul class="dep2">
+                                <li><a href="https://dev-home.homepick.com/intro/brand">- 브랜드 소개</a></li>
+                                <li><a href="https://dev-home.homepick.com/intro/category">- 홈픽과 함께하는 브랜드</a></li>
+                                <li><a href="https://dev-home.homepick.com/intro/location">- 찾아오시는 길</a></li>
+                            </ul>
+                        </li>
+                        <li class="cate_li">
+                            <span class="dep1_menu">이용안내</span>
+                            <ul class="dep2">
+                                <li><a href="https://dev-home.homepick.com/info/request_method">- 택배신청 방법</a></li>
+                                <li><a href="https://dev-home.homepick.com/info/request_cost">- 이용요금 및 시간</a></li>
+                                <li><a href="https://dev-home.homepick.com/info/note">- 유의사항</a></li>
+                                <li><a href="https://dev-home.homepick.com/info/use_term">- 이용약관</a></li>
+                                <li><a href="https://dev-home.homepick.com/info/privacy">- 개인정보수집/이용</a></li>
+                            </ul>
+                        </li>
+                        <li class="cate_li">
+                            <span class="dep1_menu">고객센터</span>
+                            <ul class="dep2">
+                                <li><a href="https://dev-home.homepick.com/bbs/list?board=notice">- 공지/홍보</a></li>
+                                <li><a href="https://dev-home.homepick.com/bbs/list?board=faq">- FAQ</a></li>
+
+                            </ul>
+                        </li>
+                        <li class="cate_li">
+                            <span class="dep1_menu">마이페이지</span>
+                            <ul class="dep2">
+                                <li><a href="https://dev-home.homepick.com/mypage/userinfo">-개인정보관리</a></li>
+                                <li><a href="https://dev-home.homepick.com/mypage/requestlist">-택배신청현황</a></li>
+                                <li><a href="https://dev-home.homepick.com/order/massOrderList">-대량신청현황</a></li>
+                                <li><a href="https://dev-home.homepick.com/mypage/addresslist">-주소록</a></li>
+                            </ul>
+                        </li>
+                        <li class="cate_li"><a href="/auth/logout>"><i><img src="/images/logout_icon.png" alt="" /></i>로그아웃</a></li>
+                        <li class="cate_li"><a href="https://dev-home.homepick.com/mypage/requestlist"><i><img src="/images/search_icon.png" alt="" /></i>택배조회</a></li>
+                    </ul>
+                </div>
+            </div>
+
+
+        </div>
+        <!-- } 상단 끝 -->
+        <main id="main">
+            <div id="container" class="wrap">
+             
+             <div id="wizard">
+
+                        <!-- SECTION 1 -->
+                        <h4></h4>
+                        <section>
+                            <form name="order_form" method="post" action="https://dev-home.homepick.com/mobile/orderRq1Tmp" onSubmit="return orderCheck();">
+                                <input type="hidden" name="_token" value="FDEjafCMGF3Qtc1sGN69TRW8QIMe9xp3nkqGXu6N">
+                                <input id="reloadValue" type="hidden" name="reloadValue" value="" />
+                                <div id="content" class="cf m_ttl_area">
+                                    <h2>
+                                        <span><img src="../images/icon_lo.png" alt="위치아이콘"></span>
+                                        <strong>어디서</strong> 보내시나요?
+                                    </h2>
+                                    <div class="dep_info cf">
+                                        <div class="info_1 fll">
+                                            <div class="dep_name">
+                                                <p>장동건</p>
+                                                <span class="phone_num_1">010-9876-5432</span>
+                                            </div>
+            
+                                            <div class="dep_add">
+                                                <p>[18520] 경기 화성시 정남면 여의동길 23 (오일리)<br>44</p>
+                                            </div>
+                                        </div>
+                                        <div class="btn_dep_modi flr">
+            
+                                            <button type="button" id="sbtn" class="btn_m_1" onclick="sender_info_change();">변 경</button>
+                                        </div>
+                                    </div>
+                                    <!-- dep_info -->
+                                    <input type="hidden" id="sender_name" name="sender_name" value="장동건">
+                                    <input type="hidden" id="sender_mobile" name="sender_mobile" value="01098765432">
+                                    <input type="hidden" id="sender_addr_zonecode" name="sender_addr_zonecode" value="18520">
+                                    <input type="hidden" name="sender_addr1" id="sender_addr1" value="경기 화성시 정남면 여의동길 23 (오일리)">
+                                    <input type="hidden" name="sender_addr2" id="sender_addr2" value="44">
+                                    <input type="hidden" name="sender_law_dong_name" id="sender_bname">
+                                    <div class="dep_date o_result">
+                                        <!-- pick_date_txt-->
+                                        <div class="wrap_date_2">
+                                            <p class="date_2 bold">
+                                                <!--span><img src="/images/icon_tm.png" alt=""></span>고객님이 지정하신 시간에</br>픽업하겠습니다--></p>
+                                            <!--pick_date_txt-->
+                                            <div id="pick_date_message" style="display:none;"></div>
+                                            <p class="date_3" id="pick_date_message_m">
+                                                <!--span class="ic_tm"><img src="/images/icon_tm.png" alt="시계아이콘"></span-->
+                                                <!--strong>'시간 지정이 가능한 지역' 입니다.</strong>
+                                 <span class="d_ex">고객님이 지정한 시간에 방문드리겠습니다.</span-->
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <!-- dep_date -->
+                                    <div class="m_form_area cf pick_date_txt">
+                                        <h3>기사방문 희망 일시</h3>
+                                        <div class="fll w50">
+                                            <input type="hidden" name="pickup_type" value="T" id="pickup_type" class="bd">
+                                            <select name="pick_date" onchange="showTime('1')" class="m_input fll h44" id="pick_date">
+                                    <option value="">날짜를 선택해주세요</option>
+                                </select>
+                                        </div>
+                                        <div class="flr w50" id="visit_date" style="display: none;">
+                                            <div class="time_select col-lg-3" id="time_select"></div>
+                                            <!--select class="m_input bd h44">
+                                    <option value="">09:00 ~ 10:00</option>
+                                    <option value="">10:00 ~ 11:00</option>
+                                    <option value="">11:00 ~ 12:00</option>
+                                </select-->
+                                        </div>
+                                    </div>
+                                    <!-- m_form_area -->
+            
+                                    <div class="m_form_area">
+                                        <h3 class="mt18">요청사항</h3>
+                                        <p class="w100">
+                                            <select name="user_pickup_request" id="user_pickup_request" class="m_input bd h44 w100">
+                                    <option value="선택해주세요">선택해주세요</option>
+                                    <option value="문앞에 물건이 있습니다">문앞에 물건이 있습니다</option>
+                                    <option value="경비실에 맡겨 두었습니다">경비실에 맡겨 두었습니다</option>
+                                    <option value="벨을 누르지 마세요">벨을 누르지 마세요</option>
+                                    <option value="무인택배함에 보관해두었습니다">무인택배함에 보관해두었습니다</option>
+                                    <option value="etc">기타</option>
+                                </select>
+                                            <input type="text" name="user_pickup_request_txt" id="user_pickup_request_txt" class="m_input bd h44 w100 frm_input">
+                                            <input type="hidden" id="order_proc" name="order_proc">
+                                        </p>
+                                        <!-- <p class="w100 cmt">※ 예약량 증가시 일부 지역에 한하여 서비스 지연이 발생하거나 예약일시가 변경될 수 있습니다.</p> -->
+                                    </div>
+                                </div>
+                            </form>
+                        </section>
+                        
+                        <!-- SECTION 2 -->
+                        <h4></h4>
+                        <section>
+                            <form name="order_form" method="post" action="/mobile/m_requestAdd/180000016587" onSubmit="return orderCheck();">
+                                <input type="hidden" name="_token" value="NJUri3rgA2ySEyNeEqiaYmYFoHL0Is9wFEHusAC5">
+                                <input id="reloadValue" type="hidden" name="reloadValue" value="" />
+                                  <div id="content" class="cf m_ttl_area order_info receiverA">
+                                      <h2>
+                                          <span><img src="../images/icon_lo.png" alt="위치아이콘"></span>
+                                          <strong>어디로</strong> 보내시나요? 
+                                      </h2>
+                                              <div class="dep_info cf">
+                                          <div class="info_1 fll">
+                                              <div class="dep_name">
+                                                  <p>김현지</p>
+                                                  <span class="phone_num_1">010-9922-3428</span>
+                                              </div>
+                                              
+                                              <div class="dep_add">
+                                                  <p>[56175] 전북 정읍시 수성로 43 (수성동, 그린빌딩)<br>11</p>
+                                              </div>
+                                          </div>
+                                          <div class="btn_dep_modi flr">
+                                                                                  <button type="button" id="sbtn" class="btn_m_1" onclick="recv_info_change()">변 경</button>
+                                                                              </div>
+                                      </div><!-- dep_info -->
+                                      <input type="hidden" name="receiver_name[]" class="receiver_name_hidden disable_input" value="김현지">
+                                      <input type="hidden" name="receiver_mobile[]" class="receiver_mobile_hidden disable_input" value="01099223428">
+                                      <input type="hidden" name="receiver_law_dong_name[]" class="receiver_bname_hidden disable_input" value="">
+                                      <input type="hidden" name="receiver_addr1[]" class="receiver_addr1_hidden disable_input" value="전북 정읍시 수성로 43 (수성동, 그린빌딩)">
+                                      <input type="hidden" name="receiver_addr2[]" class="receiver_addr2_hidden disable_input" value="11">
+                                      <input type="hidden" name="receiver_addr_zonecode[]" class="receiver_addr_zonecode_hidden disable_input" value="56175">
+                          
+                                              <div class="m_form_area arr_info">
+                                          <h3>배송 요청사항</h3>
+                                          <p class="w100">
+                                              <select class="m_input bd h44 w100"  name="delievery_request_note[]" id="delievery_request_note">
+                                                      <option value="문 앞에 놔주세요">문 앞에 놓아주세요</option>
+                                                      <option value="배송전 연락주세요">배송전 연락주세요</option>
+                                                      <option value="경비실에 맡겨주세요">경비실에 맡겨주세요</option>
+                                                      <option value="직접수령">직접수령</option>
+                                                      <option value="부재시 경비실에 맡겨주세요">부재시 경비실에 맡겨주세요</option>
+                                                      <option value="etc">기타</option>
+                                              </select>
+                                              <input type="text" name="delievery_request_note_txt" id="delievery_request_note_txt"  class="m_input bd  w100 h44 fll frm_input">
+                                          </p>
+                                      </div>
+                                  </div>
+                        </section>
+    
+                        <!-- SECTION 3 -->
+                        <h4></h4>
+                        <section>
+                            <div id="content" class="cf m_ttl_area request_info" >
+                                <h2>
+                                    <span><img src="../images/ic_box.png" alt="박스아이콘"></span>
+                                    <strong>무엇을</strong> 보내시나요?
+                                </h2>
+                    
+                                <div class="wrap_select">
+                                    <select name="category[]" id="category" class="m_input bd h44" onchange="showPackingDisable(this.value);">
+                                        <option value="">--선택해주세요--</option>
+                                                                                <option value="01">일반식품</option>
+                                                                                                    <option value="02">의류, 잡화</option>
+                                                                                                    <option value="04">서적, 문구</option>
+                                                                                                    <option value="07">농산물</option>
+                                                                                                    <option value="09">한약, 과일즙</option>
+                                                                                                    <option value="12">소형가전</option>
+                                                                                                    <option value="13">수산물</option>
+                                                                                                    <option value="15">김치류</option>
+                                                                                                    <option value="16">육류</option>
+                                                                                                    <option value="18">가구</option>
+                                                                                                    <option value="22">기타</option>
+                                                                            </select>
+                                    <div class="btn_m_2 flr">
+                                        <button type="button" onclick="showDeliveryDisable()">불가 물품 보기</button>
+                                    </div>
+                    
+                                </div>
+                                
+                                    <div class="m_form_area">
+                                        <div class="wrap_input bd h44 w100 cf">
+                                            <p class="input_con_ttl fll">물품명</p>
+                                            <p class="fll">
+                                                <input type="text" maxlength="25" name="prod_name[]"  id="prod_name" class="m_input bd h44 w100">
+                                            </p>
+                                        </div>
+                                        
+                                        <div class="wrap_input bd h44 w100 cf">
+                                            <p class="input_con_ttl fll">물품가격</p>
+                                            <p class="fll">
+                                                <input type="number" pattern="\d*" id="prod_amount" maxlength="6" name="prod_amount[]" class="prod_pr m_input bd h44 w100" placeholder="최대 50만원을 초과할 수 없음." numberonly="true" oninput="maxLengthCheck(this)">
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="price_btn_area flr">
+                                        <button type="button" id="price1" value="1000" class="fll">+1,000원</button>
+                                        <button type="button" id="price2" value="5000" class="fll">+5,000원</button>
+                                        <button type="button" id="price3" value="10000" class="fll">+10,000원</button>
+                                    </div>
+                    
+                                </div>
+                    
+                                <div class="m_form_area box_count_form">
+                                    <h3>박스 크기 및 수량</h3>
+                                    <table class="m_table_2">
+                                        <caption class="hide">박스크기 및 수량</caption>
+                                        <tbody>
+                                        <tr>
+                                            <th scope="col">극소형</th>
+                                            <td>
+                                                2kg이하, 	80cm이하</br>
+                                                (각티슈 박스 크기)
+                                            </td>
+                                            <td>
+                                                <button type="button" class="btn_ctn btn_ctn_down fll minus"><img src="/images/ic_min.png" alt=""></button>
+                                                <input type="num" name="AA_box_ea[]" value="0" id="txt1" class="bd fll box_count_select"  readonly/>
+                                                <button type="button" class="btn_ctn btn_ctn_up fll plus"><img src="/images/ic_add.png" alt=""></button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="col">소형</th>
+                                            <td>
+                                                5kg, 100cm이하</br>
+                                                (각티슈 박스 3개 크기)
+                                            </td>
+                                            <td>
+                                                <button type="button" class="btn_ctn btn_ctn_down fll minus"><img src="/images/ic_min.png" alt=""></button>
+                                                <input type="num" name="A_box_ea[]" value="1" id="txt2" class="bd fll box_count_select"  readonly/>
+                                                <button type="button" class="btn_ctn btn_ctn_up fll plus"><img src="/images/ic_add.png" alt=""></button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="col">중형</th>
+                                            <td>
+                                                10kg, 120cm이하</br>
+                                                (라면 박스 크기)
+                                            </td>
+                                            <td>
+                                                    <button type="button" class="btn_ctn btn_ctn_down fll minus"><img src="/images/ic_min.png" alt=""></button>
+                                                <input type="num" name="B_box_ea[]" value="0" id="txt3" class="bd fll  box_count_select" readonly/>
+                                                <button type="button" class="btn_ctn btn_ctn_up fll plus"><img src="/images/ic_add.png" alt=""></button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="col">대형</th>
+                                            <td>
+                                                25kg, 160cm이하</br>
+                                                (라면 박스 2개 크기)
+                                            </td>
+                                            <td>
+                                                    <button type="button" class="btn_ctn btn_ctn_down fll minus"><img src="/images/ic_min.png" alt=""></button>
+                                                <input type="num" name="C_box_ea[]" value="0" id="txt4" class="bd fll box_count_select"  readonly/>
+                                                <button type="button" class="btn_ctn btn_ctn_up fll plus"><img src="/images/ic_add.png" alt=""></button>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            
+                        </section>
+    
+                        <!-- SECTION 4 -->
+                        <h4></h4>
+                        <section>
+                            <div id="content" class="cf m_ttl_area pay_info wrap">
+                                <h2>
+                                    택배 방문접수 내역을</br>
+                                    <strong>확인</strong>하고 <strong>결제</strong>하세요.
+                                </h2>
+                                <input type="checkbox" id="chk_all" style="display:none;">
+                                <div class="total_info_area">
+                                                <div class="p_con_box cf" id="tab_order_160000021505" >
+                                        <div class="fll">
+                                            <div class="name_i">
+                                                <span>장동건</span>
+                                                <img class="arr_size" src="../images/ic_arrow.png" alt="오른쪽방향 화살표">
+                                                <span>김현지</span>
+                                            </div>
+                                            <div class="inner_con">
+                                                                            
+                                                <div>일반식품 (소형)</div>
+                                                <div>
+                                                                            </div>
+                                                <div><!--내일(4/16) 9시경 방문 예정-->
+                                                                                          <!--date("Y-m-d",strtotime("+1 day", $time)) : 내일 -->
+                                                      (05-12) 09시경 방문 예정
+                                                                                  
+                                                </div>
+                                            </div>
+                                        </div>
+                                            <input type="checkbox" name="orderVal1" id="160000021505" class="chkItem" value="3990" style="display:none">
+                                        <div class="flr order_del_a">
+                                            <div class="bold">
+                                                3,990원
+                                                <button type="button" class="del deleteOrder"  value="160000021505"></button>
+                                            </div>
+                                        </div>
+                                    </div>	
+                                            </div>
+                                
+                                <div class="all_del cf">
+                                    <button type="button" class="flr" id="deleteAllOrder">일괄삭제 하기</button>
+                                </div>
+                                
+                                <div class="info_chk_area cf">
+                                    <div class="chk_box cf">
+                                        <input type="checkbox" name="agree2" value="1" id="agree2"  class="caution fll chk_1" >
+                                        <label for ="agree2"><span></span>픽업관련 유의 사항 확인</label>
+                                        <button class="flr btn_more"><a href="https://dev-home.homepick.com/mobile/m_viewPickup" target="_blank">자세히 보기</a></button>
+                                    </div>
+                                    <div class="chk_box cf">
+                                        <input type="checkbox" name="agree1" value="1" id="agree1"  class="caution fll chk_1" >
+                                        <label for="agree1"><span></span>물품 정보 유의 사항 확인</label>
+                                        <button class="flr btn_more"><a href="https://dev-home.homepick.com/mobile/m_viewNote" target="_blank">자세히 보기</a></button>
+                                    </div>
+                                </div>
+                    
+                                <div class="cf bdb">	
+                                    <div class="total_p_area">
+                                        <strong>총 배송비</strong>
+                                        <a href="javascript:showBoxTypeCode()"><img class="q_size" src="../images/ic_q.png" alt=""></a>
+                    
+                                        <div class="total_p " id="total_order_price"><strong>3,990</strong>원</div>
+                                    </div>
+                                </div>
+                    
+                                <div class="m_form_area cf">
+                                    <h3 class="fll">결제수단 선택</h3>
+                                    
+                                    <div class="flr">
+                                        <!--input type="radio" name="chk_info" value="payco"--> 
+                                        <input name="pay_method" id="pay_0" type="radio" value="PAYCO" onclick="showText();">
+                                        <img src="../images/logo_pay.png" alt="페이코">
+                                        <input name="pay_method" id="pay_1" type="radio" value="CREDIT" onclick="showText();" class="creditcard">
+                                        신용카드
+                                    </div>
+                                </div>
+                    
+                    
+                                <div class="m_form_area">
+                                    <div class="wrap_input bd h44 w100 cf ph_num">
+                                        <p class="input_con_ttl fll">연락처</p>
+                                        <p class="fll">
+                                            <!--input type="number" id="receiver_name" maxlength="25" name="receiver_name[]" -->
+                                            <input type="number" name="area_num" pattern="\d*" numberonly="true"   class="frm_input inputs num_a"  maxlength="3"  class="m_input bd  w100frm_input fll" oninput="maxLengthCheck(this)">-
+                                            <input type="number" name="middle" pattern="\d*" numberonly="true"   class="frm_input inputs"  maxlength="4" class="m_input bd  w100frm_input fll" oninput="maxLengthCheck(this)">-
+                                            <input type="number" name="end" pattern="\d*" numberonly="true"   class="frm_input inputs"  maxlength="4" class="m_input bd  w100frm_input fll" oninput="maxLengthCheck(this)">
+                                        </p>
+                                    </div>
+                    
+                                    <div class="wrap_input bd h44 w100 cf">
+                                        <p class="input_con_ttl fll">이메일</p>
+                                        <p class="fll">
+                                            <input type="text" name="email" class="m_input bd  w100frm_input fll" maxlength="30">
+                                        </p>
+                                    </div>
+                                </div>
+                                
+                                
+                            </div>
+                        </section>
+                    </div>
+                </form>
+                <!-- main -->
+            </div>
+            <!-- wrap -->
+        </main>
+        
+        <div id="addr_wrap" style="display:none;position:fixed;overflow:hidden;z-index:9999;-webkit-overflow-scrolling:touch;">
+            <div class="col-lg-12 col-sm-12 col-xs-12 postclose2">
+                <button class="search-btn-material-address address-input md-button" onclick="foldDaumPostcode()" type="button">
+			<span class="menu_line_1"></span>
+			<span class="menu_line_1"></span>
+		</button>
+            </div>
+        </div>
+
+        
+
+    </div>
+    <script type="text/javascript" src="../js/jquery-1.11.0.min.js"></script>
+    <!-- jquery -->
+    <script type="text/javascript" src="../js/jquery-ui/jquery-ui.min.js"></script>
+    <!-- jquery -->
+    <script type="text/javascript" src="../js/jquery.bxslider.min.js"></script>
+    <!-- slide -->
+    <script src="../js/common.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+    <script src="../js/main.js"></script>
+  
+    
+    <!--<script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>-->
+    <script src="https://ssl.daumcdn.net/dmaps/map_js_init/postcode.v2.js"></script>
+    <script src="../js/bootbox.min.js"></script>
+    <script src="../js/vue.min.js"></script>
+    <script src="../js/order_script.js"></script>
+    <script src="../wizard/js/jquery-3.3.1.min.js"></script>
+		
+    <!-- JQUERY STEP -->
+    <script src="../wizard/js/jquery.steps.js"></script>
+
+    <script src="../wizard/js/main.js"></script>
+    <!-- Enliple Common Tracker v3.5 [공용] start -->
+    <!--
+<script type="text/javascript">
+<!--
+  function mobRf(){
+        var rf = new EN();
+    rf.setData("userid", "homepickok");
+        rf.setSSL(true);
+        rf.sendRf();
+    }
+//-->
+    <!--/script>
+<script src="https://cdn.megadata.co.kr/js/en_script/3.5/enliple_min3.5.js" defer="defer" onload="mobRf()"></script>
+<!-- Enliple Common Tracker v3.5 [공용] end -->
+</body>
+
+</html>

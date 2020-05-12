@@ -1,0 +1,15 @@
+@font-face {
+    font-family: 'nanum-square-r';
+    src: url('/fonts/nanumsquarer.eot');
+    src: url('/fonts/nanumsquarer.eot?#iefix') format('embedded-opentype'), url('/fonts/nanumsquarer.woff2') format('woff2'), url('/fonts/nanumsquarer.woff') format('woff'), url('/fonts/nanumsquarer.ttf') format('truetype'), url('/fonts/nanumsquarer.svg#nanumsquarerregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'nanum-square-b';
+    src: url('/fonts/nanumsquareb.eot');
+    src: url('/fonts/nanumsquareb.eot?#iefix') format('embedded-opentype'), url('/fonts/nanumsquareb.woff2') format('woff2'), url('/fonts/nanumsquareb.woff') format('woff'), url('/fonts/nanumsquareb.ttf') format('truetype'), url('/fonts/nanumsquareb.svg#nanumsquarebregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
