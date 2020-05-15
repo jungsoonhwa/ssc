@@ -1,9 +1,4 @@
-/*!
- * Bootstrap v4.4.1 (https://getbootstrap.com/)
- * Copyright 2011-2019 The Bootstrap Authors
- * Copyright 2011-2019 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
- */
+
 :root {
   --blue: #007bff;
   --indigo: #6610f2;
@@ -13588,7 +13583,7 @@ html[dir="rtl"] .github-link svg {
   display: block;
   z-index: -1;
   background: #efefef;
-  background-size: cover;
+  
   position: absolute;
   top: 0;
   right: 0
@@ -13621,17 +13616,21 @@ html[dir="rtl"] .github-link svg {
 
 .login-page .form-holder .info {
   background-color: #006eff;
+  background-image: url(../img/bg_1.png);
+  background-repeat: no-repeat;
+  background-size: cover;
   color: #fff
 }
 
-.login-page .form-holder .info h1 {
+.login-page .logo h1 {
   font-size: 58px;
   font-weight: 700;
+  color:#111;
 }
 
-.login-page .form-holder .info p {
+.login-page .logo p {
   font-weight: 300;
-  font-size: 24px;
+  font-size: 24px;margin-bottom: 20px;
 }
 
 .login-page .form-holder .form {
