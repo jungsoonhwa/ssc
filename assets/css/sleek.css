@@ -13583,7 +13583,9 @@ html[dir="rtl"] .github-link svg {
   display: block;
   z-index: -1;
   background: #efefef;
-  
+  background-image: url(../img/bg_1.png);
+  background-repeat: no-repeat;
+  background-size: cover;
   position: absolute;
   top: 0;
   right: 0
@@ -13616,16 +13618,21 @@ html[dir="rtl"] .github-link svg {
 
 .login-page .form-holder .info {
   background-color: #006eff;
-  background-image: url(../img/bg_1.png);
-  background-repeat: no-repeat;
-  background-size: cover;
+
   color: #fff
 }
 
-.login-page .logo h1 {
+.login-page .form-holder  h1 {
+  font-size: 65px;
+  font-weight: 700;
+ 
+}
+
+.login-page .logo h2 {
   font-size: 58px;
   font-weight: 700;
   color:#111;
+ 
 }
 
 .login-page .logo p {
