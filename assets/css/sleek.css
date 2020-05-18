@@ -485,7 +485,7 @@ pre {
     max-width: 1140px; } }
 
 .row {
-  display: flex;
+  display: flex; display: -ms-flexbox;
   flex-wrap: wrap;
   margin-right: -15px;
   margin-left: -15px; }
@@ -1633,10 +1633,13 @@ textarea.form-control {
   margin-top: 0.25rem; }
 
 .form-row {
-  display: flex;
+  display: flex; display: -ms-flexbox;
   flex-wrap: wrap;
   margin-right: -5px;
   margin-left: -5px; }
+  .no-flexbox .form-row {
+    display: table-cell;
+}
   .form-row > .col,
   .form-row > [class*="col-"] {
     padding-right: 5px;
@@ -1830,19 +1833,20 @@ textarea.form-control {
   box-shadow: 0 0 0 0.2rem rgba(254, 84, 97, 0.25); }
 
 .form-inline {
-  display: flex;
+  display: flex; display: -ms-flexbox;
   flex-flow: row wrap;
   align-items: center; }
+
   .form-inline .form-check {
     width: 100%; }
   @media (min-width: 576px) {
     .form-inline label {
-      display: flex;
+      display: flex; display: -ms-flexbox;
       align-items: center;
       justify-content: center;
       margin-bottom: 0; }
     .form-inline .form-group {
-      display: flex;
+      display: flex; display: -ms-flexbox;
       flex: 0 0 auto;
       flex-flow: row wrap;
       align-items: center;
@@ -1857,7 +1861,7 @@ textarea.form-control {
     .form-inline .custom-select {
       width: auto; }
     .form-inline .form-check {
-      display: flex;
+      display: flex; display: -ms-flexbox;
       align-items: center;
       justify-content: center;
       width: auto;
@@ -2567,7 +2571,7 @@ input[type="button"].btn-block {
       z-index: 1; }
 
 .btn-toolbar {
-  display: flex;
+  display: flex; display: -ms-flexbox;
   flex-wrap: wrap;
   justify-content: flex-start; }
   .btn-toolbar .input-group {
@@ -2637,7 +2641,7 @@ input[type="button"].btn-block {
 
 .input-group {
   position: relative;
-  display: flex;
+  display: flex; display: -ms-flexbox;
   flex-wrap: wrap;
   align-items: stretch;
   width: 100%; }
@@ -2677,7 +2681,7 @@ input[type="button"].btn-block {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0; }
   .input-group > .custom-file {
-    display: flex;
+    display: flex; display: -ms-flexbox;
     align-items: center; }
     .input-group > .custom-file:not(:last-child) .custom-file-label,
     .input-group > .custom-file:not(:last-child) .custom-file-label::after {
@@ -2689,7 +2693,7 @@ input[type="button"].btn-block {
 
 .input-group-prepend,
 .input-group-append {
-  display: flex; }
+  display: flex; display: -ms-flexbox; }
   .input-group-prepend .btn,
   .input-group-append .btn {
     position: relative;
@@ -2714,7 +2718,7 @@ input[type="button"].btn-block {
   margin-left: -1px; }
 
 .input-group-text {
-  display: flex;
+  display: flex; display: -ms-flexbox;
   align-items: center;
   padding: 0.59rem 1rem;
   margin-bottom: 0;
@@ -3109,7 +3113,7 @@ input[type="button"].btn-block {
       transition: none; } }
 
 .nav {
-  display: flex;
+  display: flex; display: -ms-flexbox;
   flex-wrap: wrap;
   padding-left: 0;
   margin-bottom: 0;
@@ -3174,14 +3178,14 @@ input[type="button"].btn-block {
 
 .navbar {
   position: relative;
-  display: flex;
+  display: flex; display: -ms-flexbox;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   padding: 0.5rem 1rem; }
   .navbar .container,
   .navbar .container-fluid, .navbar .container-sm, .navbar .container-md, .navbar .container-lg, .navbar .container-xl {
-    display: flex;
+    display: flex; display: -ms-flexbox;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between; }
@@ -3198,7 +3202,7 @@ input[type="button"].btn-block {
     text-decoration: none; }
 
 .navbar-nav {
-  display: flex;
+  display: flex; display: -ms-flexbox;
   flex-direction: column;
   padding-left: 0;
   margin-bottom: 0;
@@ -3458,7 +3462,7 @@ input[type="button"].btn-block {
 
 .card {
   position: relative;
-  display: flex;
+  display: flex; display: -ms-flexbox;
   flex-direction: column;
   min-width: 0;
   word-wrap: break-word;
@@ -3553,7 +3557,7 @@ input[type="button"].btn-block {
 
 @media (min-width: 576px) {
   .card-deck {
-    display: flex;
+    display: flex; display: -ms-flexbox;
     flex-flow: row wrap;
     margin-right: -15px;
     margin-left: -15px; }
@@ -3568,7 +3572,7 @@ input[type="button"].btn-block {
 
 @media (min-width: 576px) {
   .card-group {
-    display: flex;
+    display: flex; display: -ms-flexbox;
     flex-flow: row wrap; }
     .card-group > .card {
       flex: 1 0 0%;
@@ -3622,7 +3626,7 @@ input[type="button"].btn-block {
     margin-bottom: -1px; }
 
 .breadcrumb {
-  display: flex;
+  display: flex; display: -ms-flexbox;
   flex-wrap: wrap;
   padding: 1rem 1.25rem;
   margin-bottom: 1rem;
@@ -3648,7 +3652,7 @@ input[type="button"].btn-block {
   color: #6c757d; }
 
 .pagination {
-  display: flex;
+  display: flex; display: -ms-flexbox;
   padding-left: 0;
   list-style: none;
   border-radius: 0.25rem; }
@@ -3944,7 +3948,7 @@ input[type="button"].btn-block {
     background-position: 0 0; } }
 
 .progress {
-  display: flex;
+  display: flex; display: -ms-flexbox;
   height: 1rem;
   overflow: hidden;
   font-size: 0.65625rem;
@@ -3952,7 +3956,7 @@ input[type="button"].btn-block {
   border-radius: 0.25rem; }
 
 .progress-bar {
-  display: flex;
+  display: flex; display: -ms-flexbox;
   flex-direction: column;
   justify-content: center;
   overflow: hidden;
@@ -3976,14 +3980,14 @@ input[type="button"].btn-block {
       animation: none; } }
 
 .media {
-  display: flex;
+  display: flex; display: -ms-flexbox;
   align-items: flex-start; }
 
 .media-body {
   flex: 1; }
 
 .list-group {
-  display: flex;
+  display: flex; display: -ms-flexbox;
   flex-direction: column;
   padding-left: 0;
   margin-bottom: 0; }
@@ -4278,7 +4282,7 @@ a.close.disabled {
     display: none; }
 
 .toast-header {
-  display: flex;
+  display: flex; display: -ms-flexbox;
   align-items: center;
   padding: 0.25rem 0.75rem;
   color: #6c757d;
@@ -4323,7 +4327,7 @@ a.close.disabled {
     transform: scale(1.02); }
 
 .modal-dialog-scrollable {
-  display: flex;
+  display: flex; display: -ms-flexbox;
   max-height: calc(100% - 1rem); }
   .modal-dialog-scrollable .modal-content {
     max-height: calc(100vh - 1rem);
@@ -4335,7 +4339,7 @@ a.close.disabled {
     overflow-y: auto; }
 
 .modal-dialog-centered {
-  display: flex;
+  display: flex; display: -ms-flexbox;
   align-items: center;
   min-height: calc(100% - 1rem); }
   .modal-dialog-centered::before {
@@ -4353,7 +4357,7 @@ a.close.disabled {
 
 .modal-content {
   position: relative;
-  display: flex;
+  display: flex; display: -ms-flexbox;
   flex-direction: column;
   width: 100%;
   pointer-events: auto;
@@ -4377,7 +4381,7 @@ a.close.disabled {
     opacity: 0.5; }
 
 .modal-header {
-  display: flex;
+  display: flex; display: -ms-flexbox;
   align-items: flex-start;
   justify-content: space-between;
   padding: 1rem 1rem;
@@ -4398,7 +4402,7 @@ a.close.disabled {
   padding: 1rem; }
 
 .modal-footer {
-  display: flex;
+  display: flex; display: -ms-flexbox;
   flex-wrap: wrap;
   align-items: center;
   justify-content: flex-end;
@@ -4712,7 +4716,7 @@ a.close.disabled {
   top: 0;
   bottom: 0;
   z-index: 1;
-  display: flex;
+  display: flex; display: -ms-flexbox;
   align-items: center;
   justify-content: center;
   width: 15%;
@@ -4757,7 +4761,7 @@ a.close.disabled {
   bottom: 0;
   left: 0;
   z-index: 15;
-  display: flex;
+  display: flex; display: -ms-flexbox;
   justify-content: center;
   padding-left: 0;
   margin-right: 15%;
@@ -8597,7 +8601,7 @@ label {
     font-size: 1.63rem;
     font-weight: 500; }
   .breadcrumb-wrapper.breadcrumb-contacts {
-    display: flex;
+    display: flex; display: -ms-flexbox;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between; }
@@ -8936,7 +8940,7 @@ label {
     padding-left: 1.88rem;
     padding-right: 1.88rem;
     padding-top: 3rem;
-    display: flex;
+    display: flex; display: -ms-flexbox;
     flex-wrap: wrap;
     align-items: center;
     background-color: #ffffff;
@@ -9006,7 +9010,7 @@ label {
     padding-left: 1.88rem;
     padding-right: 1.88rem;
     padding-top: 3rem;
-    display: flex;
+    display: flex; display: -ms-flexbox;
     flex-wrap: wrap;
     align-items: center;
     background-color: #ffffff;
@@ -9926,7 +9930,7 @@ code {
 
 /* Wrapper */
 .wrapper {
-  display: flex;
+  display: flex; display: -ms-flexbox;
   align-items: stretch;
   flex: 1 1 auto;
   width: 100%;
@@ -9934,12 +9938,12 @@ code {
 
 /* Page Wrapper */
 .page-wrapper {
-  display: flex;
+  display: flex; display: -ms-flexbox;
   flex-direction: column;
   width: 100%; }
 
 .content-wrapper {
-  display: flex;
+  display: flex; display: -ms-flexbox;
   flex: 1 1 auto;
   flex-direction: column; }
 
@@ -10663,7 +10667,7 @@ div.copied {
 
 .left-sidebar {
   position: fixed;
-  display: flex;
+  display: flex; display: -ms-flexbox;
   flex-direction: column;
   transform: translateX(-250px);
   top: 0;
@@ -10676,7 +10680,7 @@ div.copied {
       z-index: 1; } }
 
 .sidebar {
-  display: flex;
+  display: flex; display: -ms-flexbox;
   flex-direction: column;
   overflow: hidden;
   height: 100%;
@@ -10684,7 +10688,7 @@ div.copied {
   min-height: 100vh;
   position: relative; }
   .sidebar .sidebar-inner {
-    display: flex;
+    display: flex; display: -ms-flexbox;
     flex-direction: column;
     flex: 1 1 auto;
     margin-top: 1.9rem; }
@@ -10743,7 +10747,7 @@ div.copied {
   display: block;
   background-color: #4c84ff; }
   .app-brand a {
-    display: flex;
+    display: flex; display: -ms-flexbox;
     flex-direction: row;
     align-items: center;
     height: 75px;
@@ -11586,7 +11590,7 @@ div.copied {
   border-bottom-right-radius: 4px; }
   .right-sidebar-2-body .no-col-space {
     margin-bottom: 32px;
-    display: flex;
+    display: flex; display: -ms-flexbox;
     flex-direction: row;
     justify-content: space-between;
     align-items: center; }
@@ -13617,15 +13621,19 @@ html[dir="rtl"] .github-link svg {
 }
 
 .login-page .form-holder .info {
-  background-color: #006eff;
-
+  background-color: #fff;
   color: #fff
 }
 
 .login-page .form-holder  h1 {
   font-size: 65px;
   font-weight: 700;
- 
+ width:200px;
+}
+
+
+.login-page  h1 img{
+width:100%;
 }
 
 .login-page .logo h2 {
@@ -13641,7 +13649,7 @@ html[dir="rtl"] .github-link svg {
 }
 
 .login-page .form-holder .form {
-  background: #fff
+  background-color: #efefef;
 }
 
 .login-page .form-holder .form .form-group {
